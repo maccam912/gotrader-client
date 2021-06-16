@@ -18,7 +18,7 @@ func TestLocalClient_OpenPositions(t *testing.T) {
 
 	for pos := range lc.OpenPositions() {
 		if inst := pos.Instrument; inst != "GME" {
-			t.Errorf("LocalClient.OptionPositions() instrument: %v, want GME", inst)
+			t.Errorf("LocalClient.OpenPositions() instrument: %v, want GME", inst)
 		}
 	}
 }
